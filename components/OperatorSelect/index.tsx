@@ -1,7 +1,7 @@
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select, {SelectChangeEvent} from '@mui/material/Select';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import * as React from 'react';
 
 interface OperatorSelectPropsType {
@@ -9,7 +9,7 @@ interface OperatorSelectPropsType {
   operator: string
 }
 
-const OperatorSelect: React.FC<OperatorSelectPropsType> = ({setOperator, operator}) => {
+const OperatorSelect: React.FC<OperatorSelectPropsType> = ({ setOperator, operator }) => {
 
   const handleChange = (event: SelectChangeEvent) => {
     setOperator(event.target.value);

@@ -1,4 +1,4 @@
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 import React from "react"
 import styled from 'styled-components';
 
@@ -23,10 +23,10 @@ interface CustomButtonPropsType {
 }
 
 const CustomButton = ({
-                        onClick,
-                        disabled,
-                        children
-                      }: CustomButtonPropsType) => {
+  onClick,
+  disabled,
+  children
+}: CustomButtonPropsType) => {
   return (
     <CustomButtonWrapper
       size={"large"}

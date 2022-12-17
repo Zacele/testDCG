@@ -1,9 +1,9 @@
-import {Grid, TextField} from "@mui/material";
+import { Grid, TextField } from "@mui/material";
 import CustomButton from "components/CustomButton";
-import {TAppContext} from "context";
+import { TAppContext } from "context";
 import React from "react"
 
-const FirstScreen = ({contextValue}: { contextValue: TAppContext }) => {
+const FirstScreen = ({ contextValue }: { contextValue: TAppContext }) => {
   const [firstOperand, setFirstOperand] = React.useState<number | null>(null)
   const onFirstScreenAddOperandClick = () => {
     contextValue.setItems([firstOperand])
@@ -18,7 +18,7 @@ const FirstScreen = ({contextValue}: { contextValue: TAppContext }) => {
           fullWidth
           variant="outlined"
           onChange={(e) => setFirstOperand(Number(e.target.value))}
-          type={'number'}/>
+          type={'number'} />
       </Grid>
       <Grid item xs={12} md={6}>
         <CustomButton
