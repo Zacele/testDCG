@@ -1,13 +1,21 @@
 import { Grid, TextField } from "@mui/material";
 import CustomButton from "components/CustomButton";
 import { TAppContext } from "context";
+import useKeyPress from "hooks/useKeyPress";
 import React from "react"
 
 const FirstScreen = ({ contextValue }: { contextValue: TAppContext }) => {
   const [firstOperand, setFirstOperand] = React.useState<number | null>(null)
+  const onEnterPressed = useKeyPress('Enter')
   const onFirstScreenAddOperandClick = () => {
     contextValue.setItems([firstOperand])
   }
+
+  React.useEffect(() => {
+    if (onEnterPressed) {
+      onFirstScreenAddOperandClick()
+    }
+  }, [onEnterPressed])
 
   return (
     <Grid container spacing={3} alignItems={"center"}>

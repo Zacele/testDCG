@@ -1,4 +1,5 @@
 import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -26,9 +27,11 @@ const OperandBox = ({item}: { item: string | number | null | undefined }) => {
 
   return (
     <OperandBoxWrapper>
-      <Typography>
-        {displayNumber}
-      </Typography>
+      <Tooltip disableFocusListener title={item}>
+        <Typography>
+          {displayNumber}
+        </Typography>
+      </Tooltip>
     </OperandBoxWrapper>
   )
 }

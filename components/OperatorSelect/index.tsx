@@ -6,7 +6,7 @@ import * as React from 'react';
 
 interface OperatorSelectPropsType {
   setOperator: (operator: string) => void;
-  operator: string
+  operator: string | null;
 }
 
 const OperatorSelect: React.FC<OperatorSelectPropsType> = ({ setOperator, operator }) => {
@@ -21,7 +21,7 @@ const OperatorSelect: React.FC<OperatorSelectPropsType> = ({ setOperator, operat
       <Select
         labelId="operator-select-label"
         id="operator-select"
-        value={operator}
+        value={operator ?? ''}
         label="Operator"
         onChange={handleChange}
       >

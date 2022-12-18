@@ -18,7 +18,7 @@ const CustomButtonWrapper = styled(Button)`
 
 interface CustomButtonPropsType {
   onClick: () => void,
-  disabled: boolean,
+  disabled?: boolean,
   children: React.ReactNode
 }
 

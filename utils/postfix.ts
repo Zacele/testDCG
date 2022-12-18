@@ -1,6 +1,8 @@
 const postFixEvaluation = (arr: (string | number | null | undefined)[]) => {
   let stack = []
-  for (const ele of arr) {
+  const removedEmptyStringArr = arr.filter((el : string | number | null | undefined) => (el !== " " && el !== ''))
+
+  for (const ele of removedEmptyStringArr) {
     // @ts-ignore
     if (isNaN(ele)) {
       let y = stack.pop()
